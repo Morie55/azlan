@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azlan Home</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-poppins text-base leading-relaxed text-base">
+    <header
+      class="header sticky top-0 bg-white bg-opacity-30 backdrop-blur-lg shadow-md h-15 flex justify-between items-center px-10 z-30"
+    >
+      <a href="" class="brand flex items-center gap-2.5">
+        <img
+          class="logo h-[45px] w-[50px]"
+          src="IMG/logo.png"
+          alt="azlan_Logo"
+        />
+        <h1 class="font-bold text-[30px] text-blue-700 drop-shadow-md">
+          Azlan
+        </h1>
+      </a>
+      <div class="nav nav_active hidden md:flex gap-10">
+        <a
+          href="#"
+          class="text-black font-semibold hover:text-blue-900 transition-all duration-300"
+          >Home</a
+        >
+        <a
+          href="#about_us"
+          class="text-black font-semibold hover:text-blue-900 transition-all duration-300"
+          >About</a
+        >
+        <a
+          href="#services"
+          class="text-black font-semibold hover:text-blue-900 transition-all duration-300"
+          >Services</a
+        >
+        <a
+          href="#"
+          class="text-black font-semibold hover:text-blue-900 transition-all duration-300"
+          >Contact</a
+        >
+      </div>
+      <div class="flex items-center justify-between">
+        <a
+          href="#"
+          id="loginButton"
+          class="px-4 py-1 rounded-full text-white font-semibold bg-gradient-to-r from-yellow-400 to-blue-400 hover:from-yellow-500 hover:to-blue-500 block"
+        >
+          Login
+        </a>
+        <!-- Hamburger Icon -->
+        <button id="menu-toggle" class="block md:hidden text-2xl ml-3">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Side Navigation -->
+    <div
+      id="sidebar"
+      class="sidebar fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 md:hidden"
+    >
+      <div class="p-4">
+        <button id="close-sidebar" class="text-2xl absolute top-4 right-4">
+          <i class="fas fa-times"></i>
+        </button>
+        <nav class="mt-10">
+          <a
+            href="#"
+            class="block text-black font-semibold hover:text-blue-900 transition-all duration-300 py-2 hover:text-yellow-500"
+            >Home</a
+          >
+          <a
+            href="#about_us"
+            class="block text-black font-semibold hover:text-blue-900 transition-all duration-300 py-2 hover:text-yellow-500"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="block text-black font-semibold hover:text-blue-900 transition-all duration-300 py-2 hover:text-yellow-500"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="block text-black font-semibold hover:text-blue-900 transition-all duration-300 py-2 hover:text-yellow-500"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <!-- Login/Signup Form -->
+    <div
+      id="loginForm"
+      class="fixed inset-0 hidden bg-transparent bg-opacity-75 flex justify-center items-center z-50"
+    >
+      <div
+        class="bg-white border shadow-md h-15 p-8 rounded-lg shadow-lg w-[400px] shadow-lg rounded-lg"
+      >
+        <p class="text-center mb-5">Signup to be part of Azlan</p>
+        <h2 class="text-2xl font-bold mb-4 text-center">Login</h2>
+        <form>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="password"
+            >
+              Password
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+              href="https://lkmedia.netlify.app/"
+            >
+              Sign In
+            </button>
+            <a
+              href="#"
+              class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+            >
+              Forgot Password?
+            </a>
+          </div>
+        </form>
+        <hr class="my-4" />
+        <div class="text-center">
+          <p class="text-yellow-500">Don't have an account?</p>
+          <a href="#" class="text-blue-500 hover:text-blue-800 font-bold"
+            >Sign up here</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <section
+      class="flex-container flex flex-col md:flex-row flex-wrap md:flex-nowrap min-h-[400px] p-10 pt-10 justify-center sm:pt-5"
+    >
+      <div
+        class="main_content content flex flex-col flex-[2_2_0%] m-0 p-2 text-left md:pr-10"
+      >
+        <h3 class="text-lg font-normal sm:text-[14px] text-gray-400">
+          --- Welcome to Azlan
+        </h3>
+        <h1
+          class="text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.1] mb-7 sm:text-[50px]"
+        >
+          Where Innovation Meets Excellence
+        </h1>
+        <p class="text-[16px] sm:text-[14px] mb-10 md:text-[25px]">
+          Discover a world of limitless learning possibilities at Azlan, your
+          premier destination for online educational training.
+        </p>
+        <div>
+          <a
+            href="#"
+            class="inline-block px-6 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-yellow-400 to-blue-400 hover:from-yellow-500 hover:to-blue-500"
+          >
+            Get started
+          </a>
+        </div>
+      </div>
+      <div class="flex-[2_2_0%] overflow-hidden mt-8 md:mt-0 animate-fade-in">
+        <video
+          class="hero_video w-full h-full rounded-[10px]"
+          autoplay
+          loop
+          muted
+        >
+          <source
+            src="VIDEOS/Browse thousands of Coding images for design inspiration.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </section>
+
+    <!--About Us Section-->
+    
+    <div
+      id="about_us"
+      class="w-full flex flex-col md:flex-row gap-4 min-h-80 p-14 rounded-lg overflow-hidden gap-10 items-center justify-center md:mt-10"
+    >
+      <div
+        class="w-full sm:w-2/5 h-80 flex items-center justify-center flex-1 hidden sm:block"
+      >
+        <img
+          class="w-full h-full object-cover rounded-lg"
+          src="IMG/Vision.jpg"
+          alt=""
+        />
+      </div>
+      <div
+        class="w-full sm:w-3/5 space-y-10 md:pl-10 flex items-center justify-center flex-1"
+      >
+        <div
+          class="flex flex-col items-center min-h-[400px] sm:min-h-[initial]"
+        >
+          <h1 class="text-3xl font-bold text-blue-900">About Us</h1>
+          <p class="mb-10 mt-5 leading-6 sm:w-full sm:text-justify">
+            Welcome to Azlan, a brand that captures the essence of the
+            <b class="text-yellow-400 text-shadow-small">lion—courageous</b>,
+            bold, and steadfast. Derived from the Arabic word for lion, Azlan
+            symbolizes not only strength but also an unwavering spirit. Azlan
+            represents more than a brand; it's a mindset for those who pursue
+            their dreams with fearless determination and honor. Embrace your
+            inner lion with Azlan and let your courage shine!
+          </p>
+
+          <div class="mt-10">
+            <a
+              class="px-4 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-yellow-400 to-blue-400 hover:from-yellow-500 hover:to-blue-500"
+              href="#"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <!-- Overlay Container -->
+    <div id="overlay" class="w-full h-full z-30 bg-black/70 fixed top-0 left-0 right-0 bottom-0 hidden">
+    </div>
+
+    <!-- Team Section -->
+
+    <section>
+      <div class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12 xl:px-32">
+          <div class="mb-16 text-center">
+            <h2
+              class="mb-4 text-center text-2xl text-blue-900 font-bold md:text-4xl"
+            >
+              Meet the Team
+            </h2>
+            <p class="text-gray-600 lg:w-8/12 lg:mx-auto">
+              Azlan is powered by a dynamic group of young professionals
+              determined to reshape their stories by empowering others to
+              develop their skills. Each team member is an expert in their
+              field, working together to make a meaningful impact.
+            </p>
+          </div>
+          <div class="grid gap-12 items-center md:grid-cols-3">
+            <div class="space-y-4 text-center">
+              <img
+                class="w-64 h-64 mx-auto object-cover object-top rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                src="IMG/Morie_Keita.jpg"
+                alt="woman"
+                loading="lazy"
+                width="640"
+                height="805"
+              />
+              <div>
+                <h4 class="text-2xl">Morie Keita</h4>
+                <span class="block text-sm text-gray-500">CEO-Founder</span>
+              </div>
+            </div>
+            <div class="space-y-4 text-center">
+              <img
+                class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80 rotate-anticlockwise"
+                src="IMG/WhatsApp Image 2024-08-31 at 13.48.53_033853a0.jpg"
+                alt="man"
+                loading="lazy"
+                width="1000"
+                height="667"
+              />
+
+              <div>
+                <h4 class="text-2xl">Lansana Kaba</h4>
+                <span class="block text-sm text-gray-500"
+                  >Chief Innovation Officer</span
+                >
+              </div>
+            </div>
+            <div class="space-y-4 text-center">
+              <img
+                class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                src="IMG/abdulai_kamara.png"
+                alt="woman"
+                loading="lazy"
+                width="1000"
+                height="667"
+              />
+              <div>
+                <h4 class="text-2xl">Abdulai Kamara</h4>
+                <span class="block text-sm text-gray-500"
+                  >Chief Operations Officer</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <section id="services" class="p-14">
+      <h1 class="text-3xl font-bold text-center text-blue-900">Services</h1>
+
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div
+          class="h-[300px] p-4 rounded-lg border-gray-300 shadow-lg bg-white rounded-lg"
+        >
+          <div class="flex items-center gap-2">
+            <span class="h-8 w-8 rounded-full bg-[#1c39ba]"></span>
+            <h2 class="text-xl font-bold">Web App Development</h2>
+          </div>
+          <p class="mt-4 text-gray-600 leading-relaxed">
+            At Azlan, we build robust web apps that deliver seamless user
+            experiences. Our expertise covers front-end development with HTML,
+            CSS, and JavaScript, along with back-end management for smooth
+            functionality. Using like React and Next.js, our applications are
+            responsive, secure, and optimized for performance.
+            <span class="block">
+              <a
+                href=""
+                class="flex items-center text-blue-600 hover:text-yellow-500 transition-transform duration-300 hover:translate-x-2"
+              >
+                Read More <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </span>
+          </p>
+        </div>
+
+        <div
+          class="h-[300px] p-4 rounded-lg border border-gray-300 shadow-lg bg-white rounded-lg"
+        >
+          <div class="flex items-center gap-2">
+            <span class="h-8 w-8 rounded-full bg-[#1c39ba]"></span>
+            <h2 class="text-xl font-bold">Mobile App Development</h2>
+          </div>
+          <p class="mt-4">
+            We also specialize in developing cross-platform mobile applications
+            using React Native with JavaScript and Xamarin Forms with C#. Our
+            approach ensures that apps deliver seamless user experiences on both
+            iOS and Android, with a focus on responsiveness, security, and
+            performance optimization.
+
+            <span class="block hover:text-yellow-500">
+              <a
+                href=""
+                class="flex items-center transition-transform duration-300 hover:translate-x-2"
+              >
+                Read More <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </span>
+          </p>
+        </div>
+        <div
+          class="h-[300px] p-4 rounded-lg border-gray-300 shadow-lg bg-white rounded-lg"
+        >
+          <div class="flex items-center gap-2">
+            <span class="h-8 w-8 rounded-full bg-[#1c39ba]"></span>
+            <h2 class="text-xl font-bold">Desktop App Development</h2>
+          </div>
+          <p class="mt-4">
+            At Azlan, we create robust desktop applications using Visual Basic
+            with the DevExpress Framework. Our development process ensures
+            seamless functionality and a smooth user experience, focusing on
+            responsiveness, security, and performance optimization.
+          </p>
+          <span class="block hover:text-yellow-500">
+            <a
+              href=""
+              class="flex items-center transition-transform duration-300 hover:translate-x-2"
+            >
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </span>
+        </div>
+        <div
+          class="h-[300px] p-4 rounded-lg border border-gray-300 shadow-lg bg-white rounded-lg"
+        >
+          <div class="flex items-center gap-2">
+            <span class="h-8 w-8 rounded-full bg-[#1c39ba]"></span>
+            <h2 class="text-xl font-bold">Graphic Design</h2>
+          </div>
+          <p class="mt-4">
+            At Azlan, we provide expert graphics design services that deliver
+            visually stunning and effective communications. We focus on
+            branding, marketing materials, and digital assets, ensuring every
+            design enhances your brand's impact and meets your specific needs.
+          </p>
+          <span class="block hover:text-yellow-500">
+            <a
+              href=""
+              class="flex items-center transition-transform duration-300 hover:translate-x-2"
+            >
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </span>
+        </div>
+        <div
+          class="h-[300px] p-4 rounded-lg border-gray-300 shadow-lg bg-white rounded-lg"
+        >
+          <div class="flex items-center gap-2">
+            <span class="h-8 w-8 rounded-full bg-[#1c39ba]"></span>
+            <h2 class="text-xl font-bold">Data Science</h2>
+          </div>
+          <p class="mt-4">
+            We leverage data science to extract valuable insights and drive
+            strategic decision-making. Our services include data analysis,
+            predictive modeling, and machine learning, using advanced tools to
+            uncover trends and patterns.
+          </p>
+          <span class="block hover:text-yellow-500">
+            <a
+              href=""
+              class="flex items-center transition-transform duration-300 hover:translate-x-2"
+            >
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </span>
+        </div>
+        <div
+          class="h-[300px] p-4 rounded-lg border border-gray-300 shadow-lg bg-white rounded-lg"
+        >
+          <div class="flex items-center gap-2">
+            <span class="h-8 w-8 rounded-full bg-[#1c39ba]"></span>
+            <h2 class="text-xl font-bold">Multi-Media</h2>
+          </div>
+          <p class="mt-4">
+            Azlan also offer professional multimedia services, including music
+            production and video shooting. Our expertise ensures high-quality
+            audio and visually compelling content, tailored to meet your
+            specific needs and enhance your projects.
+          </p>
+          <span class="block hover:text-yellow-500">
+            <a
+              href=""
+              class="flex items-center transition-transform duration-300 hover:translate-x-2"
+            >
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Post Section -->
+    <section class="bg-gray-100 py-10">
+      <div class="container mx-auto px-6 md:px-12 xl:px-32">
+        <div class="mb-16 text-center">
+          <h2
+            class="text-3xl font-bold text-blue-900 mb-4"
+            id="lastes_blog_posts"
+          >
+            Latest Blog Posts
+          </h2>
+          <p class="text-gray-600 lg:w-8/12 lg:mx-auto">
+            Stay updated with the latest trends and insights from Azlan.
+          </p>
+        </div>
+        <div class="grid gap-12 items-center md:grid-cols-2 lg:grid-cols-3">
+          <!-- Blog Post 1 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="IMG/Excited young man.jpeg"
+              alt="Excited young man"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">
+                From Novice to Pro
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A personal success story or case study on rapidly learning
+                programming skills.
+              </p>
+              <a
+                href="#"
+                class="text-yellow-500 hover:text-yellow-600 font-bold"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <!-- Blog Post 2 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="IMG/Databases.jpeg"
+              alt="Databases"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">
+                Understanding the Basics of Databases
+              </h3>
+              <p class="text-gray-600 mb-4">
+                An introductory post explaining databases in a clear and
+                approachable way.
+              </p>
+              <a
+                href="#"
+                class="text-yellow-500 hover:text-yellow-600 font-bold"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <!-- Blog Post 3 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="IMG/Using Tailwind CSS With React.jpeg"
+              alt="Using Tailwind CSS"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">
+                Tips and Tricks with Tailwind CSS
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Practical advice on how to make websites responsive using
+                Tailwind CSS.
+              </p>
+              <a
+                href="#"
+                class="text-yellow-500 hover:text-yellow-600 font-bold"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutorials Sections -->
+
+    <article class="p-14">
+      <h1 class="text-3xl font-bold text-center text-blue-900">Tutorials</h1>
+
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div
+          class="h-[300px] border-gray-300 shadow-lg bg-white relative overflow-hidden"
+        >
+          <!-- Image Section -->
+          <div class="flex items-center justify-center h-[150px]">
+            <img
+              class="w-full h-full object-cover"
+              src="IMG/Freepik.jpeg"
+              alt="Database Design with SQL and SSMS"
+            />
+          </div>
+
+          <!-- Content Section -->
+          <div class="p-4">
+            <h1 class="font-bold text-lg mb-1">
+              Database Design with SQL and SSMS
+            </h1>
+            <p class="text-sm text-gray-500 mb-4">Morie Keita</p>
+
+            <!-- Progress Bar -->
+            <div
+              class="w-full h-[5px] bg-gray-300 rounded-full overflow-hidden mb-1"
+            >
+              <div class="w-[95%] h-full bg-blue-500"></div>
+            </div>
+
+            <!-- Completion and Rating -->
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-sm text-gray-600">95% completed</p>
+              <div class="text-sm">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex">
+                <div class="rounded-full w-3 h-3 border    bg-gray-500"></div>
+                <div class="rounded-full w-3 h-3 border -ml-2   bg-blue-500"></div>
+                <div class="rounded-full w-3 h-3 border  -ml-2  bg-yellow-500"></div>  
+                <p class="text-right text-xs text-gray-400 ml-1">You and 2 others</p>
+              </div>
+              <p class="text-right text-xs text-gray-400">Your rating</p>
+            </div> 
+          </div>
+
+          <!-- Menu Icon -->
+          <div
+            class="w-8 h-8 bg-gray-200 absolute top-2 right-2 flex items-center justify-center cursor-pointer"
+          >
+          <i>
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </i>
+          </div>
+        </div>
+
+        <div
+          class="h-[300px] border-gray-300 shadow-lg bg-white relative overflow-hidden"
+        >
+          <!-- Image Section -->
+          <div class="flex items-center justify-center h-[150px]">
+            <img
+              class="w-full h-full object-cover"
+              src="IMG/Freepik.jpeg"
+              alt="Database Design with SQL and SSMS"
+            />
+          </div>
+
+          <!-- Content Section -->
+          <div class="p-4">
+            <h1 class="font-bold text-lg mb-1">
+              Mobile Applications Development
+            </h1>
+            <p class="text-sm text-gray-500 mb-4">Morie Keita</p>
+
+            <!-- Progress Bar -->
+            <div
+              class="w-full h-[5px] bg-gray-300 rounded-full overflow-hidden mb-1"
+            >
+              <div class="w-[80%] h-full bg-blue-500"></div>
+            </div>
+
+            <!-- Completion and Rating -->
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-sm text-gray-600">80% completed</p>
+              <div class="text-sm">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-gray-400"></i>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex">
+                <div class="rounded-full w-3 h-3 border    bg-gray-500"></div>
+                <div class="rounded-full w-3 h-3 border -ml-2   bg-blue-500"></div>
+                <div class="rounded-full w-3 h-3 border  -ml-2  bg-yellow-500"></div>  
+                <p class="text-right text-xs text-gray-400 ml-1">You and 2 others</p>
+              </div>
+              <p class="text-right text-xs text-gray-400">Your rating</p>
+            </div> 
+          </div>
+
+          <!-- Menu Icon -->
+          <div
+            class="w-8 h-8 bg-gray-200 absolute top-2 right-2 flex items-center justify-center cursor-pointer"
+          >
+          <i>
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </i>
+          </div>
+        </div>
+
+        <div
+          class="h-[300px] border-gray-300 shadow-lg bg-white relative overflow-hidden"
+        >
+          <!-- Image Section -->
+          <div class="flex items-center justify-center h-[150px]">
+            <img
+              class="w-full h-full object-cover"
+              src="IMG/Freepik.jpeg"
+              alt="Database Design with SQL and SSMS"
+            />
+          </div>
+
+          <!-- Content Section -->
+          <div class="p-4">
+            <h1 class="font-bold text-lg mb-1">
+              Desktop Applications Development
+            </h1>
+            <p class="text-sm text-gray-500 mb-4">Morie Keita</p>
+
+            <!-- Progress Bar -->
+            <div
+              class="w-full h-[5px] bg-gray-300 rounded-full overflow-hidden mb-1"
+            >
+              <div class="w-[100%] h-full bg-blue-500"></div>
+            </div>
+
+            <!-- Completion and Rating -->
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-sm text-gray-600">100% completed</p>
+              <div class="text-sm">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex">
+                <div class="rounded-full w-3 h-3 border    bg-gray-500"></div>
+                <div class="rounded-full w-3 h-3 border -ml-2   bg-blue-500"></div>
+                <div class="rounded-full w-3 h-3 border  -ml-2  bg-yellow-500"></div>  
+                <p class="text-right text-xs text-gray-400 ml-1">You and 2 others</p>
+              </div>
+              <p class="text-right text-xs text-gray-400">Your rating</p>
+            </div> 
+          </div>
+
+          <!-- Menu Icon -->
+          <div
+            class="w-8 h-8 bg-gray-200 absolute top-2 right-2 flex items-center justify-center cursor-pointer"
+          >
+          <i>
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </i>
+          </div>
+        </div>
+
+        <div
+          class="h-[300px] border-gray-300 shadow-lg bg-white relative overflow-hidden"
+        >
+          <!-- Image Section -->
+          <div class="flex items-center justify-center h-[150px]">
+            <img
+              class="w-full h-full object-cover"
+              src="IMG/Freepik.jpeg"
+              alt="Database Design with SQL and SSMS"
+            />
+          </div>
+
+          <!-- Content Section -->
+          <div class="p-4">
+            <h1 class="font-bold text-lg mb-1">
+              Graphics Design
+            </h1>
+            <p class="text-sm text-gray-500 mb-4">Morie Keita</p>
+
+            <!-- Progress Bar -->
+            <div
+              class="w-full h-[5px] bg-gray-300 rounded-full overflow-hidden mb-1"
+            >
+              <div class="w-[70%] h-full bg-blue-500"></div>
+            </div>
+
+            <!-- Completion and Rating -->
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-sm text-gray-600">70% completed</p>
+              <div class="text-sm">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-gray-400"></i>
+                <i class="fas fa-star text-gray-400"></i>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex">
+                <div class="rounded-full w-3 h-3 border    bg-gray-500"></div>
+                <div class="rounded-full w-3 h-3 border -ml-2   bg-blue-500"></div>
+                <div class="rounded-full w-3 h-3 border  -ml-2  bg-yellow-500"></div>  
+                <p class="text-right text-xs text-gray-400 ml-1">You and 2 others</p>
+              </div>
+              <p class="text-right text-xs text-gray-400">Your rating</p>
+            </div> 
+          </div>
+
+          <!-- Menu Icon -->
+          <div
+            class="w-8 h-8 bg-gray-200 absolute top-2 right-2 flex items-center justify-center cursor-pointer"
+          >
+          <i>
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </i>
+          </div>
+        </div>
+
+
+        <div
+          class="h-[300px] border-gray-300 shadow-lg bg-white relative overflow-hidden"
+        >
+          <!-- Image Section -->
+          <div class="flex items-center justify-center h-[150px]">
+            <img
+              class="w-full h-full object-cover"
+              src="IMG/Freepik.jpeg"
+              alt="Database Design with SQL and SSMS"
+            />
+          </div>
+
+          <!-- Content Section -->
+          <div class="p-4">
+            <h1 class="font-bold text-lg mb-1">
+              Multi-Media (Audio & Video)
+            </h1>
+            <p class="text-sm text-gray-500 mb-4">Morie Keita</p>
+
+            <!-- Progress Bar -->
+            <div
+              class="w-full h-[5px] bg-gray-300 rounded-full overflow-hidden mb-1"
+            >
+              <div class="w-[40%] h-full bg-blue-500"></div>
+            </div>
+
+            <!-- Completion and Rating -->
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-sm text-gray-600">40% completed</p>
+              <div class="text-sm">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-gray-400"></i>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex">
+                <div class="rounded-full w-3 h-3 border    bg-gray-500"></div>
+                <div class="rounded-full w-3 h-3 border -ml-2   bg-blue-500"></div>
+                <div class="rounded-full w-3 h-3 border  -ml-2  bg-yellow-500"></div>  
+                <p class="text-right text-xs text-gray-400 ml-1">You and 2 others</p>
+              </div>
+              <p class="text-right text-xs text-gray-400">Your rating</p>
+            </div> 
+          </div>
+
+          <!-- Menu Icon -->
+          <div
+            class="w-8 h-8 bg-gray-200 absolute top-2 right-2 flex items-center justify-center cursor-pointer"
+          >
+          <i>
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </i>
+          </div>
+        </div>
+
+
+        <div
+          class="h-[300px] border-gray-300 shadow-lg bg-white relative overflow-hidden"
+        >
+          <!-- Image Section -->
+          <div class="flex items-center justify-center h-[150px]">
+            <img
+              class="w-full h-full object-cover"
+              src="IMG/Freepik.jpeg"
+              alt="Database Design with SQL and SSMS"
+            />
+          </div>
+
+          <!-- Content Section -->
+          <div class="p-4">
+            <h1 class="font-bold text-lg mb-1">
+              Microst Office Packages
+            </h1>
+            <p class="text-sm text-gray-500 mb-4">Morie Keita</p>
+
+            <!-- Progress Bar -->
+            <div
+              class="w-full h-[5px] bg-gray-300 rounded-full overflow-hidden mb-1"
+            >
+              <div class="w-[60%] h-full bg-blue-500"></div>
+            </div>
+
+            <!-- Completion and Rating -->
+            <div class="flex justify-between items-center mb-1">
+              <p class="text-sm text-gray-600">60% completed</p>
+              <div class="text-sm">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-gray-400"></i>
+                <i class="fas fa-star text-gray-400"></i>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex">
+                <div class="rounded-full w-3 h-3 border    bg-gray-500"></div>
+                <div class="rounded-full w-3 h-3 border -ml-2   bg-blue-500"></div>
+                <div class="rounded-full w-3 h-3 border  -ml-2  bg-yellow-500"></div>  
+                <p class="text-right text-xs text-gray-400 ml-1">You and 2 others</p>
+              </div>
+              <p class="text-right text-xs text-gray-400">Your rating</p>
+            </div> 
+          </div>
+
+          <!-- Menu Icon -->
+          <div
+            class="w-8 h-8 bg-gray-200 absolute top-2 right-2 flex items-center justify-center cursor-pointer"
+          >
+          <i>
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </i>
+          </div>
+        </div>
+    </article>
+
+
+    <!-- Footer Section -->
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-700 pb-6 mb-6"
+        >
+          <div class="mb-6 md:mb-0">
+            <h2 class="text-2xl font-bold text-yellow-400">Azlan</h2>
+            <p class="mt-2 text-sm text-gray-300">
+              Empowering innovation through technology and education.
+            </p>
+          </div>
+          <div
+            class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12"
+          >
+            <div class="md:w-1/4">
+              <h3 class="text-lg font-semibold text-gray-200">Quick Links</h3>
+              <ul class="mt-2 space-y-2 text-sm text-gray-300">
+                <li>
+                  <a href="#" class="hover:underline hover:text-yellow-400"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:underline hover:text-yellow-400"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:underline hover:text-yellow-400"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:underline hover:text-yellow-400"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="md:w-1/4">
+              <h3 class="text-lg font-semibold text-gray-200">Contact Us</h3>
+              <ul class="mt-2 text-sm text-gray-300">
+                <li>30 Junction Hill Station</li>
+                <li>Freetown Sierra Leone</li>
+                <li>
+                  Email:
+                  <a
+                    href="mailto:info@azlan.com"
+                    class="hover:underline hover:text-yellow-400"
+                    >info@azlan.com</a
+                  >
+                </li>
+                <li>Phone: (232) 331-413</li>
+              </ul>
+            </div>
+            <div class="md:w-1/4">
+              <h3 class="text-lg font-semibold text-gray-200">Follow Us</h3>
+              <div class="mt-2 flex space-x-4">
+                <a href="#" class="text-blue-500 hover:text-blue-700"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="text-blue-400 hover:text-blue-600"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-pink-500 hover:text-pink-700"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-sm text-gray-400">
+          <p>&copy; 2024 Azlan. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="JavaScript/script.js"></script>
+    
+  </body>
+</html>
