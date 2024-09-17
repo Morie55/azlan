@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+   
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-poppins text-base leading-relaxed text-base">
@@ -167,21 +168,21 @@
 
     <!-- Hero Section -->
 
-    <section
-      class="flex-container flex flex-col md:flex-row flex-wrap md:flex-nowrap min-h-[400px] p-10 pt-10 justify-center sm:pt-5"
+ <section
+    class="flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10  space-y-0 md:space-y-0 gap-4"
     >
       <div
-        class="main_content content flex flex-col flex-[2_2_0%] m-0 p-2 text-left md:pr-10"
+      class="flex flex-col sm:mb-32 sm:space-y-12 md:w-1/2"
       >
-        <h3 class="text-lg font-normal sm:text-[14px] text-gray-400">
+        <h3 class="text-lg font-normal sm:text-[14px] text-gray-400 mt-10">
           --- Welcome to Azlan
         </h3>
         <h1
-          class="text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.1] mb-7 sm:text-[50px]"
+        class="max-w-md text-4xl font-bold md:text-5xl md:text-left mb-5"
         >
           Where Innovation Meets Excellence
         </h1>
-        <p class="text-[16px] sm:text-[14px] mb-10 md:text-[25px]">
+        <p class="max-w-sm mb-10 mt-5 text-black md:text-left">
           Discover a world of limitless learning possibilities at Azlan, your
           premier destination for online educational training.
         </p>
@@ -194,9 +195,9 @@
           </a>
         </div>
       </div>
-      <div class="flex-[2_2_0%] overflow-hidden mt-8 md:mt-0 animate-fade-in">
+      <div class="md:w-1/2 items-center justify-center">
         <video
-          class="hero_video w-full h-full rounded-[10px]"
+          class="w-full h-full rounded-[10px]"
           autoplay
           loop
           muted
@@ -206,8 +207,8 @@
             type="video/mp4"
           />
         </video>
-      </div>
-    </section>
+      </div>      
+    </section> 
 
     <!--About Us Section-->
     
@@ -921,7 +922,44 @@
         </div>
     </article>
 
-
+    <section class="Testimonial mb-20 px-4">
+      <h1 class="text-blue-500 text-center font-bold text-xl md:text-2xl lg:text-3xl mb-6">What Our Customers Say</h1>
+      <div class="bg-blue-700 text-white py-8 px-6 rounded-lg mx-auto my-4 max-w-3xl relative testimonials-container">
+        <!-- Progress Bar -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-white animate-grow"></div>
+      
+        <!-- Quote Icons -->
+        <div class="absolute top-4 left-4 text-white text-lg opacity-30 md:text-xl md:left-8 lg:left-10">
+          <i class="fas fa-quote-left"></i>
+        </div>
+        <div class="absolute bottom-4 right-4 text-white text-lg opacity-30 md:text-xl md:right-8 lg:right-10">
+          <i class="fas fa-quote-right"></i>
+        </div>
+      
+        <!-- Testimonial Text -->
+        <p class="leading-6 text-justify mb-6 testimonial text-sm md:text-base">
+          <!-- Text will be updated here by JS -->
+        </p>
+      
+        <!-- User Info -->
+        <div class="flex flex-col items-center md:flex-row md:items-start mt-4 md:mt-6">
+          <img
+            src="IMG/Morie_Keita.jpg"
+            alt="user"
+            class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover mb-4 md:mb-0 md:mr-4 user-image"
+          />
+          <div class="text-center md:text-left user-details">
+            <h4 class="text-base md:text-lg font-semibold username">
+              <!-- Name will be updated here by JS -->
+            </h4>
+            <p class="text-gray-300 role text-sm md:text-base">
+              <!-- Position will be updated here by JS -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- Footer Section -->
 
     <footer class="bg-gray-800 text-white py-8">

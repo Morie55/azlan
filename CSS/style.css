@@ -34,3 +34,22 @@ a {
     animation: fadeIn 2s ease-in-out;
   }
 
+  /* Testimonial */
+
+
+ /* Keyframes for animation */
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Apply animation */
+.animate-grow {
+  animation: grow 10s linear infinite;
+}
+
+
